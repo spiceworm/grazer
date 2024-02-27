@@ -1,0 +1,9 @@
+AAPL:
+  url: 'https://finance.yahoo.com/quote/AAPL'
+  css_selector: 'fin-streamer.Fw\(b\):nth-child(1)'
+  html_key: 'value'
+
+AMZN:
+  url: 'https://finance.yahoo.com/quote/AMZN'
+  css_selector: 'fin-streamer.Fw\(b\):nth-child(1)'
+  html_key: 'value'

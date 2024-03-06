@@ -10,7 +10,13 @@ def get_price(label, element):
     css_selector = element["css_selector"]
     html_key = element.get("html_key")
 
-    resp = requests.get(url)
+    resp = requests.get(
+        url,
+        headers={
+            "Cache-Control": "no-cache",
+            "Pragma": "no-cache",
+        }
+    )
     soup = bs4.BeautifulSoup(resp.text, features="html.parser")
     selected = soup.select(css_selector)[0]
     if html_key:
